@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Item from "./Item";
 
@@ -8,7 +8,7 @@ const GroceryList = props => {
   return (
     <div className="shopping-list">
       {props.groceries.map(item => (
-        <Item key={item.id} item={item} />
+        <Item toggleItem = {props.toggleItem} key={item.id} item={item} />
       ))}
     </div>
   );
